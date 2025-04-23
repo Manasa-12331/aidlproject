@@ -1,61 +1,46 @@
-🦴 **Knee Osteoarthritis Severity Prediction from X-ray Images**
+🦴 Knee Osteoarthritis Severity Detection
 
-Millions of people worldwide are affected by knee osteoarthritis (OA), a prevalent condition involving the deterioration of joint cartilage and underlying bone.
-In this project, the important issue of predicting knee OA severity using X-ray images is addressed through the utilization of deep learning models.
-Dataset- https://www.kaggle.com/datasets/shashwatwork/knee-osteoarthritis-dataset-with-severity
+This project aims to classify knee X-ray images into three severity levels of Osteoarthritis: Healthy, Moderate, and Severe. We leverage both custom CNN architectures and transfer learning with EfficientNetB5 to achieve high classification performance.
 
+🚀 Project Objectives
 
-📁 **Dataset**
+Build a baseline CNN model for multiclass classification
 
-X-ray images divided into 3 classes: Healthy, Moderate, and Severe
+Improve performance using deeper custom CNNs
 
-~500 images per class
+Apply EfficientNetB5 (transfer learning) to boost accuracy and reduce overfitting
 
-Preprocessed and split into training, validation, and test sets
+Address class imbalance using class weights and data balancing
 
-Loaded using Keras ImageDataGenerator
+Evaluate and compare models using accuracy, F1-score, and confusion matrix
 
-🧠 **Models Used**
-Baseline CNN Model
+📁 Dataset Overview
 
-Simple 3-layer CNN architecture
+Total images: 3,000 (balanced across 3 classes)
 
-Trained from scratch
+Image size: 224x224
 
-Achieved ~79% test accuracy
+Split: 70% Train, 15% Validation, 15% Test
 
-Deeper CNN
+Format: Loaded using ImageDataGenerator and flow_from_dataframe()
 
-More convolutional layers added to improve feature extraction
+🧪 Evaluation Metrics
 
-Achieved ~83% test accuracy
+Accuracy
 
-EfficientNetB5 (Transfer Learning)
-
-Pretrained on ImageNet
-
-Final layer customized for 3-class classification
-
-Currently training and evaluating
-
-📊 **Evaluation Metrics**
-
-Each model is evaluated using:
-
-Accuracy (train, validation, test)
-
-Loss
+Precision, Recall, F1-Score (per class)
 
 Confusion Matrix
 
-Classification Report (Precision, Recall, F1-score)
+Training & Validation Curves
 
-Training/Validation loss and accuracy curves
+👥 Team
 
+Tarun Teja Miditana – Baseline CNN, EfficientNetB5 modeling, evaluation, and visualization
 
-📈 **Sample Results (So Far)**
+Manasa Reddy Kaitha – DenseNet121 model implementation and testing
 
-	Model | Train Acc | Val Acc | Test Acc | Notes
-	Baseline CNN | ~73% | ~79% | ~79% | Simple model, solid results
-	Deeper CNN | ~64% | ~68% | 83% | Improved generalization
-	EfficientNetB5 | TBD | TBD | TBD | Still training
+Manideep Sai Ram Sadhu – MobileNetV3 model implementation and optimization
+
+UNC Charlotte, Spring 2025
+Graduate Program: Data Science & Business Analytics
